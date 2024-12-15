@@ -2,8 +2,8 @@
 
 A lightweight Flask-based proxy server that converts OpenAI API response to Claude API format with streaming support.
 
-Blog: [https://blog.mrtlobs.net/
-](https://blog.mrtblogs.net/openai2claude-converter)
+Intro: [https://blog.mrtlobs.net/openai2claude-converter](https://blog.mrtblogs.net/openai2claude-converter)
+
 ## Key Features
 
 - SSE (Server-Sent Events) streaming support
