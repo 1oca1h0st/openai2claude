@@ -22,3 +22,9 @@ A lightweight Flask-based proxy server that converts OpenAI API response to Clau
 Install dependencies:
 ```bash
 pip install flask flask-cors requests
+
+## Or use Docker
+
+```bash
+docker build -t openai2claude .
+docker run -d -p 5001:5001 --name openai2claude -restart=always openai2claude
