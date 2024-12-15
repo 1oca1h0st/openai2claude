@@ -51,7 +51,7 @@ def proxy_from_claude_stream():
             if line:
                 line_str = line.decode('utf-8').strip()
                 if not message_started:
-                    yield f'event: message_start\ndata: {json.dumps({
+                    yield f'''event: message_start\ndata: {json.dumps({
                         "type": "message_start",
                         "message": {
                             "id": str(uuid.uuid4()),
@@ -60,7 +60,7 @@ def proxy_from_claude_stream():
                             "usage": {"input_tokens": 8, "output_tokens": 0},
                             "role": "assistant"
                         }
-                    })}\n\n'
+                    })}\n\n'''
                     yield f'event: content_block_start\ndata: {json.dumps({"type": "content_block_start", "index": 0, "content_block": {"type": "text", "text": ""}})}\n\n'
                     yield f'event: ping\ndata: {json.dumps({"type": "ping"})}\n\n'
                     message_started = True
